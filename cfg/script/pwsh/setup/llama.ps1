@@ -4,20 +4,20 @@
     if ($YES) {
       $yn = 'y'
     } else {
-      $yn = Read-Host '? setup llama-swap - (system/user) [y, [n]]'
+      $yn = Read-Host '? setup llama - llama-swap - (system/user) [y, [n]]'
     }
     if ($yn -ne 'n') {
-      $name = 'llama-swap'
-      $description = 'model swapping for llama.cpp'
-      if (Get-ScheduledTask -TaskName $name -ErrorAction SilentlyContinue) {
-        opPrintMaybeRunCmd Stop-ScheduledTask -TaskName $name
+      $task = 'llama-swap'
+      $taskObj = Get-ScheduledTask -TaskName $task -ErrorAction SilentlyContinue
+      if ($taskObj) {
+        opPrintMaybeRunCmd Stop-ScheduledTask -TaskName $task
         opPrintMaybeRunCmd Start-Sleep -Seconds 2
-        opPrintMaybeRunCmd Unregister-ScheduledTask -TaskName $name '-Confirm:$false'
+        opPrintMaybeRunCmd Unregister-ScheduledTask -TaskName $task '-Confirm:$false'
         opPrintMaybeRunCmd Start-Sleep -Seconds 2
       }
       $action = New-ScheduledTaskAction `
-        -Execute 'V:\llm\bin\llama-swap.exe' `
-        -Argument '-config V:\llm\llama-swap\config.yaml -listen :8080 -watch-config'
+        -Execute "${env:HOME}\.local\bin\llama-swap.exe" `
+        -Argument "-config ${env:HOME}\.llama\config.yaml -listen :8080 -watch-config"
       # $principal = New-ScheduledTaskPrincipal `
       #   -Id Author `
       #   -LogonType password `
@@ -36,19 +36,19 @@
         -StartWhenAvailable
       $trigger = New-ScheduledTaskTrigger `
         -AtStartup
-      opPrintCmd Register-ScheduledTask -Force -TaskName $name '<args>'
+      opPrintCmd Register-ScheduledTask -Force -TaskName $task '<args>'
       if (-not $NOOP) {
         Register-ScheduledTask `
           -Force `
-          -TaskName $name `
-          -Description $description `
+          -TaskName $task `
+          -Description 'model swapping for llama.cpp' `
           -Action $action `
           -User marshall `
           -Password johnnywhoosh `
           -Settings $settings `
           -Trigger $trigger
       }
-      opPrintMaybeRunCmd Start-ScheduledTask -TaskName $name
+      opPrintMaybeRunCmd Start-ScheduledTask -TaskName $task
       opPrintMaybeRunCmd Start-Sleep -Seconds 2
     }
   } else {

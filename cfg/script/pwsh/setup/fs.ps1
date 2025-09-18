@@ -4,7 +4,7 @@
     if ($YES) {
       $yn = 'y'
     } else {
-      $yn = Read-Host '? repair fs - enable long paths (system) [y, [n]]'
+      $yn = Read-Host '? setup fs - enable long paths (system) [y, [n]]'
     }
     if ($yn -ne 'n') {
       opPrintMaybeRunCmd Push-Location 'HKLM:'

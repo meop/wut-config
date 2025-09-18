@@ -20,7 +20,7 @@ function () {
             opPrintMaybeRunCmd rm "${output}"
           }
           install_keyring
-          local cuda_toolkit_ver='12-9'
+          local cuda_toolkit_ver='13-0'
           opPrintMaybeRunCmd sudo apt update '>' /dev/null '2>&1'
           opPrintMaybeRunCmd sudo apt install cuda-toolkit-"${cuda_toolkit_ver}"
         fi
@@ -30,14 +30,14 @@ function () {
           read 'yn?? install nvidia - container toolkit (system) [y, [n]]: '
         fi
         if [[ $yn != 'n' ]]; then
-          function install_container_keyring {
+          function install_keyring {
             local output_gpg='/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg'
             local output='/etc/apt/sources.list.d/nvidia-container-toolkit.list'
             local url='https://nvidia.github.io/libnvidia-container'
-            opPrintMaybeRunCmd sudo --preserve-env bash -c '"'curl --fail-with-body --location --no-progress-meter --url "${url}/gpgkey" '|' gpg --dearmor -o "${output_gpg}"'"'
-            opPrintMaybeRunCmd sudo --preserve-env bash -c '"'curl --fail-with-body --location --no-progress-meter --url "${url}/stable/deb/nvidia-container-toolkit.list" '|' sed ''\'s#deb https://#deb '['signed-by="${output_gpg}"']' https://#g''\' '>' "${output}"'"'
+            opPrintMaybeRunCmd sudo --preserve-env sh -c '"'curl --fail-with-body --location --no-progress-meter --url "${url}/gpgkey" '|' gpg --dearmor -o "${output_gpg}"'"'
+            opPrintMaybeRunCmd sudo --preserve-env sh -c '"'curl --fail-with-body --location --no-progress-meter --url "${url}/stable/deb/nvidia-container-toolkit.list" '|' sed "'"s#deb https://#deb '['signed-by="${output_gpg}"']' https://#g"'" '>' "${output}"'"'
           }
-          install_container_keyring
+          install_keyring
           opPrintMaybeRunCmd sudo apt update '>' /dev/null '2>&1'
           opPrintMaybeRunCmd sudo apt install nvidia-container-toolkit nvidia-container-toolkit-base libnvidia-container-tools libnvidia-container1
           opPrintMaybeRunCmd sudo nvidia-ctk runtime configure --runtime=docker

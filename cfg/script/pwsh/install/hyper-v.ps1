@@ -4,7 +4,7 @@
     if ($YES) {
       $yn = 'y'
     } else {
-      $yn = Read-Host '? install hyper-v (system) [y, [n]]'
+      $yn = Read-Host '? install hyper-v - enable windows features (system) [y, [n]]'
     }
     if ($yn -ne 'n') {
       opPrintMaybeRunCmd Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All

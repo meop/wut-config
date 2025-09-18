@@ -18,7 +18,7 @@ function () {
 
           local output='/etc/apt/sources.list.d/docker.list'
           local arch="$(dpkg --print-architecture)"
-          opPrintMaybeRunCmd sudo --preserve-env bash -c '"'echo ''\'deb '['arch="${arch}" signed-by="${output_key}"']' "${url}" "${SYS_OS_VER_CODE}" stable''\' '>' "${output}"'"'
+          opPrintMaybeRunCmd sudo --preserve-env sh -c '"'echo "'"deb '['arch="${arch}" signed-by="${output_key}"']' "${url}" "${SYS_OS_VER_CODE}" stable"'" '>' "${output}"'"'
         }
         install_repo
         opPrintMaybeRunCmd sudo apt update '>' /dev/null '2>&1'

@@ -4,7 +4,7 @@
     if ($YES) {
       $yn = 'y'
     } else {
-      $yn = Read-Host '? install bun (user) [y, [n]]'
+      $yn = Read-Host '? install bun - (user) [y, [n]]'
     }
     if ($yn -ne 'n') {
       $url = 'https://bun.sh/install.ps1'

@@ -1,8 +1,0 @@
----
-llama-swap:
-  - in: com.llama-swap.plist
-    out:
-      darwin: '{HOME}/Library/LaunchAgents/com.llama-swap.plist'
-  - in: llama-swap.service
-    out:
-      linux: /etc/systemd/system/llama-swap.service

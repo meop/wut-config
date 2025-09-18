@@ -7,6 +7,12 @@ pwsh:
     deno:
       sys_os_plat:
         - winnt
+    hyper-v:
+      sys_os_plat:
+        - winnt
+    llm:
+      sys_os_plat:
+        - winnt
     scoop:
       sys_os_plat:
         - winnt
@@ -19,6 +25,9 @@ pwsh:
       sys_os_plat:
         - winnt
     fs:
+      sys_os_plat:
+        - winnt
+    llama-swap:
       sys_os_plat:
         - winnt
     webdav:
@@ -34,7 +43,6 @@ zsh:
   install:
     brew:
       sys_os_plat:
-        # - linux
         - darwin
     docker:
       sys_os_plat:
@@ -67,9 +75,6 @@ zsh:
         - ubuntu
         - rocky
         - fedora
-    nvim:
-      sys_os_plat:
-        - linux
     nvidia:
       sys_cpu_arch:
         - x86_64
@@ -86,7 +91,9 @@ zsh:
   repair:
     brew:
       sys_os_plat:
-        # - linux
+        - darwin
+    copyq:
+      sys_os_plat:
         - darwin
     plasma:
       sys_os_plat:

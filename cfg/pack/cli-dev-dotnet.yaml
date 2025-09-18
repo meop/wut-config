@@ -1,0 +1,10 @@
+---
+dnf:
+  names:
+    - dotnet-sdk-9.0
+pacman:
+  names:
+    - dotnet-sdk
+scoop:
+  names:
+    - dotnet-sdk

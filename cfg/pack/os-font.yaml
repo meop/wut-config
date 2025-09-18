@@ -1,0 +1,18 @@
+---
+brew:
+  names:
+    - --cask
+    - font-fira-code-nerd-font
+    - font-hack-nerd-font
+pacman:
+  names:
+    - ttf-firacode-nerd
+    - ttf-hack-nerd
+scoop:
+  add:
+    - scoop bucket add nerd-fonts
+  rem:
+    - scoop bucket rm nerd-fonts
+  names:
+    - FiraCode-NF-Mono
+    - Hack-NF-Mono

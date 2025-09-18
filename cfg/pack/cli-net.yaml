@@ -1,0 +1,20 @@
+---
+apt:
+  names:
+    - bind9
+    - bind9-dnsutils
+    - bridge-utils
+    - cifs-utils
+    - nfs-kernel-server
+dnf:
+  names:
+    - bind
+    - bridge-utils
+    - cifs-utils
+    - nfs-utils
+pacman:
+  names:
+    - bind
+    - bridge-utils
+    - cifs-utils
+    - nfs-utils

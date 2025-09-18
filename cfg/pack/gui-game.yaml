@@ -1,0 +1,41 @@
+---
+brew:
+  names:
+    - --cask
+    - steam
+pacman:
+  add:
+    - sudo sed --in-place "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+  rem:
+    - sudo sed --in-place "/\[multilib\]/,/Include/"'s/^/#/' /etc/pacman.conf
+  names:
+    - steam
+scoop:
+  add:
+    - scoop bucket add games
+  rem:
+    - scoop bucket rm games
+  names:
+    - eden
+    - pcsx2
+    - rpcs3
+    - shadps4
+    - xemu
+    - xenia-canary
+winget:
+  names:
+    - Meta.Oculus
+    - Microsoft.DirectX
+    - Microsoft.VCRedist.2005.x64
+    - Microsoft.VCRedist.2005.x86
+    - Microsoft.VCRedist.2008.x64
+    - Microsoft.VCRedist.2008.x86
+    - Microsoft.VCRedist.2010.x64
+    - Microsoft.VCRedist.2010.x86
+    - Microsoft.VCRedist.2012.x64
+    - Microsoft.VCRedist.2012.x86
+    - Microsoft.VCRedist.2013.x64
+    - Microsoft.VCRedist.2013.x86
+    - Microsoft.VCRedist.2015+.x64
+    - Microsoft.VCRedist.2015+.x86
+    - Valve.Steam

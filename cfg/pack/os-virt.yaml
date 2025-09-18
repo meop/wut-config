@@ -1,0 +1,10 @@
+---
+brew:
+  names:
+    - swtpm
+    - --cask
+    - utm
+pacman:
+  names:
+    - swtpm
+    - qemu-full

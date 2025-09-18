@@ -1,0 +1,11 @@
+---
+brew:
+  names:
+    - --cask
+    - android-studio
+yay:
+  names:
+    - android-studio
+winget:
+  names:
+    - Google.AndroidStudio

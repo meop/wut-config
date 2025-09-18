@@ -1,0 +1,16 @@
+---
+brew:
+  names:
+    - ruby
+apt:
+  names:
+    - ruby-full
+dnf:
+  names:
+    - ruby
+pacman:
+  names:
+    - ruby
+scoop:
+  names:
+    - ruby

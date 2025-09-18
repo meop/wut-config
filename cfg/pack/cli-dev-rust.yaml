@@ -1,0 +1,16 @@
+---
+brew:
+  names:
+    - rustup
+apt:
+  names:
+    - rustup
+dnf:
+  names:
+    - rustup
+pacman:
+  names:
+    - rustup
+winget:
+  names:
+    - Rustlang.Rustup

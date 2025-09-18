@@ -1,0 +1,109 @@
+---
+pwsh:
+  install:
+    bun:
+      sys_os_plat:
+        - winnt
+    deno:
+      sys_os_plat:
+        - winnt
+    scoop:
+      sys_os_plat:
+        - winnt
+  repair:
+    gpu:
+      sys_os_plat:
+        - winnt
+  setup:
+    clock:
+      sys_os_plat:
+        - winnt
+    fs:
+      sys_os_plat:
+        - winnt
+    webdav:
+      sys_os_plat:
+        - winnt
+    windows-terminal:
+      sys_os_plat:
+        - winnt
+    wsl:
+      sys_os_plat:
+        - winnt
+zsh:
+  install:
+    brew:
+      sys_os_plat:
+        # - linux
+        - darwin
+    docker:
+      sys_os_plat:
+        - linux
+      sys_os_id:
+        - debian
+        - ubuntu
+    dotnet:
+      sys_cpu_arch:
+        - x86_64
+      sys_os_plat:
+        - linux
+      sys_os_id:
+        - debian
+        - ubuntu
+    font:
+      sys_os_plat:
+        - linux
+    node:
+      sys_os_plat:
+        - linux
+      sys_os_id:
+        - debian
+        - ubuntu
+    nu:
+      sys_os_plat:
+        - linux
+      sys_os_id:
+        - debian
+        - ubuntu
+        - rocky
+        - fedora
+    nvim:
+      sys_os_plat:
+        - linux
+    nvidia:
+      sys_cpu_arch:
+        - x86_64
+      sys_os_plat:
+        - linux
+      sys_os_id:
+        - debian
+        - ubuntu
+    yay:
+      sys_os_plat:
+        - linux
+      sys_os_id:
+        - arch
+  repair:
+    brew:
+      sys_os_plat:
+        # - linux
+        - darwin
+    plasma:
+      sys_os_plat:
+        - linux
+      sys_os_de_id:
+        - plasma
+  setup:
+    gnome-terminal:
+      sys_os_plat:
+        - linux
+      sys_os_de_id:
+        - gnome
+    iterm:
+      sys_os_plat:
+        - darwin
+    lxterminal:
+      sys_os_plat:
+        - linux
+      sys_os_de_id:
+        - lxde

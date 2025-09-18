@@ -1,0 +1,10 @@
+[wsl2]
+dhcp=false
+ipv6=true
+localhostForwarding=false
+networkingMode=bridged
+swap=0
+vmSwitch=External
+
+[experimental]
+sparseVhd=true

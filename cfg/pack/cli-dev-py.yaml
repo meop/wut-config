@@ -1,0 +1,21 @@
+---
+brew:
+  names:
+    - python
+    - uv
+apt:
+  names:
+    - python3
+    # - uv *
+dnf:
+  names:
+    - python3
+    - uv
+pacman:
+  names:
+    - python
+    - uv
+scoop:
+  names:
+    - python
+    - uv

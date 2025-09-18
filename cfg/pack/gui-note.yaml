@@ -1,0 +1,11 @@
+---
+brew:
+  names:
+    - --cask
+    - obsidian
+pacman:
+  names:
+    - obsidian
+winget:
+  names:
+    - Obsidian.Obsidian

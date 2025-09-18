@@ -1,0 +1,31 @@
+---
+brew:
+  add:
+    - brew tap oven-sh/bun
+  rem:
+    - brew untap oven-sh/bun
+  names:
+    - bun
+    - deno
+    - node
+apt:
+  names:
+  # - nodejs *
+  # - npm *
+dnf:
+  names:
+    - nodejs
+    - nodejs-npm
+pacman:
+  names:
+    - deno
+    - nodejs
+    - npm
+yay:
+  names:
+    - bun-bin
+winget:
+  names:
+    - DenoLand.Deno
+    - OpenJS.NodeJS
+    - Oven-sh.Bun

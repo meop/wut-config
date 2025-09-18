@@ -1,0 +1,28 @@
+---
+brew:
+  names:
+    - autoconf
+    - automake
+apt:
+  names:
+    - apt-utils
+    - autoconf
+    - automake
+    - build-essential
+    - libssl-dev
+dnf:
+  names:
+    - autoconf
+    - automake
+    - gcc
+    - gcc-c++
+    - kernel-devel
+    - openssl-devel
+pacman:
+  names:
+    - autoconf
+    - automake
+    - base-devel
+scoop:
+  names:
+    - msys2

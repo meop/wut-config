@@ -1,0 +1,19 @@
+---
+brew:
+  names:
+    - --cask
+    - brave-browser
+    - microsoft-edge
+    - vivaldi
+pacman:
+  names:
+    - vivaldi
+yay:
+  names:
+    - brave-bin
+    - microsoft-edge-stable-bin
+winget:
+  names:
+    - Brave.Brave
+    - Microsoft.Edge
+    - Vivaldi.Vivaldi

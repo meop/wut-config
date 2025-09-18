@@ -1,0 +1,11 @@
+---
+brew:
+  names:
+    - --cask
+    - wireshark
+pacman:
+  names:
+    - wireshark-qt
+winget:
+  names:
+    - WiresharkFoundation.Wireshark

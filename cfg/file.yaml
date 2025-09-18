@@ -1,0 +1,105 @@
+---
+docker:
+  - in: config.json
+    out:
+      darwin: '{HOME}/.docker/config.json'
+      linux: '{HOME}/.docker/config.json'
+      winnt: '{HOME}/.docker/config.json'
+fzf:
+  - in: theme.zsh
+    out:
+      darwin: '{HOME}/.fzf/theme.zsh'
+      linux: '{HOME}/.fzf/theme.zsh'
+  - in: theme.ps1
+    out:
+      winnt: '{HOME}/.fzf/theme.ps1'
+ghostty:
+  - in: config
+    out:
+      darwin: '{HOME}/.config/ghostty/config'
+      linux: '{HOME}/.config/ghostty/config'
+  - in: themes
+    out:
+      darwin: '{HOME}/.config/ghostty/themes'
+      linux: '{HOME}/.config/ghostty/themes'
+nu:
+  - in: nu
+    out:
+      darwin: '{HOME}/.nu'
+      linux: '{HOME}/.nu'
+      winnt: '{HOME}/.nu'
+  - in: env.nu
+    out:
+      darwin: '{HOME}/.config/nushell/env.nu'
+      linux: '{HOME}/.config/nushell/env.nu'
+      winnt: '{HOME}/AppData/Roaming/nushell/env.nu'
+  - in: config.nu
+    out:
+      darwin: '{HOME}/.config/nushell/config.nu'
+      linux: '{HOME}/.config/nushell/config.nu'
+      winnt: '{HOME}/AppData/Roaming/nushell/config.nu'
+nvim:
+  - in: init.lua
+    out:
+      darwin: '{HOME}/.config/nvim/init.lua'
+      linux: '{HOME}/.config/nvim/init.lua'
+      winnt: '{HOME}/AppData/Local/nvim/init.lua'
+  - in: lua
+    out:
+      darwin: '{HOME}/.config/nvim/lua'
+      linux: '{HOME}/.config/nvim/lua'
+      winnt: '{HOME}/AppData/Local/nvim/lua'
+pwsh:
+  - in: pwsh
+    out:
+      darwin: '{HOME}/.pwsh'
+      linux: '{HOME}/.pwsh'
+      winnt: '{HOME}/.pwsh'
+  - in: env.ps1
+    out:
+      darwin: '{HOME}/.config/powershell/env.ps1'
+      linux: '{HOME}/.config/powershell/env.ps1'
+      winnt: '{HOME}/Documents/PowerShell/env.ps1'
+  - in: profile.ps1
+    out:
+      darwin: '{HOME}/.config/powershell/profile.ps1'
+      linux: '{HOME}/.config/powershell/profile.ps1'
+      winnt: '{HOME}/Documents/PowerShell/profile.ps1'
+ssh:
+  - in: hushlogin
+    out:
+      darwin: '{HOME}/.hushlogin'
+      linux: '{HOME}/.hushlogin'
+      winnt: '{HOME}/.hushlogin'
+starship:
+  - in: starship.toml
+    out:
+      darwin: '{HOME}/.config/starship.toml'
+      linux: '{HOME}/.config/starship.toml'
+      winnt: '{HOME}/.config/starship.toml'
+wsl:
+  - in: wslconfig
+    out:
+      winnt: '{HOME}/.wslconfig'
+zellij:
+  - in: config.kdl
+    out:
+      darwin: '{HOME}/.config/zellij/config.kdl'
+      linux: '{HOME}/.config/zellij/config.kdl'
+  - in: themes
+    out:
+      darwin: '{HOME}/.config/zellij/themes'
+      linux: '{HOME}/.config/zellij/themes'
+zsh:
+  - in: zsh
+    out:
+      darwin: '{HOME}/.zsh'
+      linux: '{HOME}/.zsh'
+  - in: zshenv
+    out:
+      darwin: '{HOME}/.zshenv'
+      linux: '{HOME}/.zshenv'
+  - in: zshrc
+    out:
+      darwin: '{HOME}/.zshrc'
+      linux: '{HOME}/.zshrc'

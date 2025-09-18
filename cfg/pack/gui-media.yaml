@@ -1,0 +1,19 @@
+---
+brew:
+  names:
+    - --cask
+    - iina
+    - vlc
+pacman:
+  names:
+    - vlc
+scoop:
+  add:
+    - scoop bucket add extras
+  rem:
+    - scoop bucket rm extras
+  names:
+    - mpc-hc-fork
+winget:
+  names:
+    - VideoLAN.VLC

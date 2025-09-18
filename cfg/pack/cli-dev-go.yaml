@@ -1,0 +1,16 @@
+---
+brew:
+  names:
+    - go
+apt:
+  names:
+    - golang
+dnf:
+  names:
+    - golang
+pacman:
+  names:
+    - go
+winget:
+  names:
+    - GoLang.Go

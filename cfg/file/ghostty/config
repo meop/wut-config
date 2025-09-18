@@ -1,0 +1,9 @@
+auto-update = off
+cursor-style = block
+cursor-style-blink = true
+font-family = Hack Nerd Font Mono
+font-size = 11
+scrollback-limit = 9000
+theme = theme
+window-height = 48
+window-width = 160

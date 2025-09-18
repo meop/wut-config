@@ -1,0 +1,8 @@
+---
+pacman:
+  names:
+    - gnome
+    - gnome-extra
+    - gnome-shell-extensions
+    - gnome-terminal
+    - gnome-tweaks

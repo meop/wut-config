@@ -1,0 +1,124 @@
+---
+brew:
+  names:
+    - bottom
+    - ca-certificates
+    - coreutils
+    - curl
+    - fd
+    - fzf
+    - git
+    - neovim
+    - nushell
+    - openssh
+    - openssl
+    - ripgrep
+    - sevenzip
+    - starship
+    - tokei
+    - unzip
+    - zellij
+    - zoxide
+    - zstd
+    - --cask
+    - powershell
+apt:
+  names:
+    - btm
+    - ca-certificates
+    - coreutils
+    - curl
+    - fd-find
+    - fzf
+    - git
+    - gnupg
+    - neovim
+    - openssl
+    - openssh-client
+    - openssh-server
+    # - python3-pynvim
+    - ripgrep
+    - starship
+    - sudo
+    - tokei
+    - unzip
+    # - zellij *
+    - zoxide
+    - zsh
+    - zstd
+dnf:
+  add:
+    - sudo dnf copr enable atim/bottom
+    - sudo dnf copr enable atim/starship
+    - sudo dnf copr enable varlad/zellij
+  rem:
+    - sudo dnf copr remove varlad/zellij
+    - sudo dnf copy remove atim/starship
+    - sudo dnf copr remove atim/bottom
+  names:
+    - bottom
+    - ca-certificates
+    - coreutils
+    - curl
+    - fd-find
+    - fzf
+    - git
+    - gnupg
+    - neovim
+    - openssh
+    - openssl
+    # - python3-neovim
+    - ripgrep
+    - starship
+    - tokei
+    - sudo
+    - unzip
+    - zellij
+    - zoxide
+    - zsh
+    - zstd
+pacman:
+  names:
+    - 7zip
+    - bottom
+    - ca-certificates
+    - curl
+    - fd
+    - fzf
+    - git
+    - neovim
+    - nushell
+    - openssh
+    - openssl
+    # - python-pynvim
+    - ripgrep
+    - starship
+    - sudo
+    - tokei
+    - unzip
+    - zellij
+    - zoxide
+    - zsh
+    - zstd
+yay:
+  names:
+    - powershell-bin
+scoop:
+  names:
+    - bottom
+    - fd
+    - fzf
+    - ripgrep
+    - tokei
+    - unzip
+    - zoxide
+    - zstd
+winget:
+  names:
+    - 7zip.7zip
+    - Git.Git
+    - Microsoft.AppInstaller
+    - Microsoft.PowerShell
+    - Neovim.Neovim
+    - Nushell.Nushell
+    - Starship.Starship

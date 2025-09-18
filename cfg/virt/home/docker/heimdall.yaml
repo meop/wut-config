@@ -1,0 +1,17 @@
+---
+name: heimdall
+services:
+  web:
+    environment:
+      - PGID=10000
+      - PUID=9000
+      - TZ=America/Los_Angeles
+    hostname: heimdall
+    image: lscr.io/linuxserver/heimdall:latest
+    ports:
+      - '80:80/tcp'
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /data/virt/docker/home/heimdall/web/config
+        target: /config

@@ -1,0 +1,11 @@
+---
+brew:
+  names:
+    - --cask
+    - visual-studio-code
+yay:
+  names:
+    - visual-studio-code-bin
+winget:
+  names:
+    - Microsoft.VisualStudioCode

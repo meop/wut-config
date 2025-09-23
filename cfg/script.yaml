@@ -10,7 +10,7 @@ pwsh:
     hyper-v:
       sys_os_plat:
         - winnt
-    llm:
+    llama:
       sys_os_plat:
         - winnt
     scoop:
@@ -27,7 +27,7 @@ pwsh:
     fs:
       sys_os_plat:
         - winnt
-    llama-swap:
+    llama:
       sys_os_plat:
         - winnt
     webdav:

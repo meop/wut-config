@@ -1,7 +1,7 @@
 & {
   if ($IsWindows) {
     $yn = ''
-    function expand_github_release_assets ([string]$url, [string[]]$patterns) {
+    function expand_release_assets ([string]$url, [string[]]$patterns) {
       $res = (opPrintMaybeRunCmd Invoke-WebRequest -ErrorAction Stop -ProgressAction SilentlyContinue -Uri "${url}") |
         ConvertFrom-Json
       if (-not $NOOP) {
@@ -48,7 +48,7 @@
       $patterns = @(
         , "*windows*${arch}.zip"
       )
-      expand_github_release_assets $url $patterns
+      expand_release_assets $url $patterns
     }
     if ($YES) {
       $yn = 'y'
@@ -68,7 +68,7 @@
         , "*win-cuda*${arch}.zip"
         # , "*win-vulkan*${llama_cpp_arch}.zip"
       )
-      expand_github_release_assets $url $patterns
+      expand_release_assets $url $patterns
     }
   }
 }

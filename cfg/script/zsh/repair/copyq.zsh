@@ -1,7 +1,7 @@
 function () {
   local yn=''
   if [[ -d /Applications/CopyQ.app ]]; then
-    if type brew > /dev/null; then
+    if [[ $YES ]]; then
       yn='y'
     else
       read 'yn?? repair copyq - sign app (system) [y, [n]]: '

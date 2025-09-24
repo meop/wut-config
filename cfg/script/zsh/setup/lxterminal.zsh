@@ -35,6 +35,7 @@ function () {
         'geometry_rows'
         'hidescrollbar'
       )
+      # folke/tokyonight_moon
       config_file_swap_to=(
         'Hack Nerd Font Mono 11'
         '9000'

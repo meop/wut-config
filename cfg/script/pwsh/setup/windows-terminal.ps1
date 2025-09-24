@@ -27,6 +27,7 @@
               scrollbarState = 'hidden'
             }
           }
+          # folke/tokyonight_moon
           schemes     = @(
             , @{
               background          = '#222436'

@@ -1,4 +1,3 @@
-# https://github.com/folke/tokyonight.nvim/blob/main/extras/iterm/tokyonight_moon.itermcolors
 function () {
   local yn=''
   if [[ -d /Applications/iTerm.app ]]; then
@@ -7,6 +6,7 @@ function () {
     else
       read 'yn?? setup iterm - download theme (user) [y, [n]]: '
     fi
+    # https://github.com/folke/tokyonight.nvim/blob/main/extras/iterm/tokyonight_moon.itermcolors
     if [[ $yn != 'n' ]]; then
       local outputDir="${HOME}/Downloads"
       if [[ ! -d "$outputDir" ]]; then

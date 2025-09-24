@@ -22,6 +22,13 @@ ghostty:
     out:
       darwin: '{HOME}/.config/ghostty/themes'
       linux: '{HOME}/.config/ghostty/themes'
+konsole:
+  - in: default.profile
+    out:
+      linux: '{HOME}/.local/share/konsole/default.profile'
+  - in: theme.colorscheme
+    out:
+      linux: '{HOME}/.local/share/konsole/theme.colorscheme'
 nu:
   - in: nu
     out:

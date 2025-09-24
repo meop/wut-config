@@ -1,4 +1,3 @@
-# https://github.com/folke/tokyonight.nvim/blob/main/extras/gnome_terminal/tokyonight_moon.dconf
 function () {
   local yn=''
   if type gnome-terminal > /dev/null; then
@@ -29,6 +28,7 @@ function () {
         'use-theme-background'
         'use-theme-colors'
       )
+      # https://github.com/folke/tokyonight.nvim/blob/main/extras/gnome_terminal/tokyonight_moon.dconf
       config_file_swap_to=(
         "'rgb(34, 36, 54)'"
         "'rgb(200, 211, 245)'"

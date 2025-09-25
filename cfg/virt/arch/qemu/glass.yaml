@@ -34,7 +34,7 @@ qemu:
     - -rtc base=localtime,clock=host
     - -cpu host,host-cache-info=on,migratable=off{QEMU_GUEST_CPU_FLAGS}
     - -smp sockets={QEMU_GUEST_CPU_SOCKETS},cores={QEMU_GUEST_CPU_CORES},threads={QEMU_GUEST_CPU_THREADS}
-    - -m 24g
+    - -m 36g
     ## bridge
     - -netdev bridge,id=net0,br={QEMU_HOST_NIC}
     ## macvlan

@@ -4,6 +4,9 @@ pwsh:
     bun:
       sys_os_plat:
         - winnt
+    choco:
+      sys_os_plat:
+        - winnt
     deno:
       sys_os_plat:
         - winnt

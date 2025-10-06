@@ -31,7 +31,7 @@ symbol = " "
 when = true
 
 [custom.linux]
-command = "[ -f /etc/os-release ] && grep -Po '^ID=\\K[a-zA-Z0-9._-]+' /etc/os-release"
+command = "[ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d '=' -f 2 | xargs | tr -d '\"'"
 format = "[$symbol$output]($style) in "
 os = "linux"
 shell = ["sh"]

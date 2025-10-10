@@ -23,9 +23,9 @@ ghostty:
       darwin: '{HOME}/.config/ghostty/themes'
       linux: '{HOME}/.config/ghostty/themes'
 konsole:
-  - in: default.profile
+  - in: Default.profile
     out:
-      linux: '{HOME}/.local/share/konsole/default.profile'
+      linux: '{HOME}/.local/share/konsole/Default.profile'
   - in: theme.colorscheme
     out:
       linux: '{HOME}/.local/share/konsole/theme.colorscheme'

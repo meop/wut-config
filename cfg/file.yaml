@@ -84,6 +84,10 @@ starship:
       darwin: '{HOME}/.config/starship.toml'
       linux: '{HOME}/.config/starship.toml'
       winnt: '{HOME}/.config/starship.toml'
+winget:
+  - in: settings.json
+    out:
+      winnt: '{HOME}/AppData/Local/Packages/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe/LocalState/settings.json'
 wsl:
   - in: wslconfig
     out:

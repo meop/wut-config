@@ -1,4 +1,8 @@
 ---
+brew:
+  names:
+    - --cask
+    - dotnet-sdk
 dnf:
   names:
     - dotnet-sdk-9.0

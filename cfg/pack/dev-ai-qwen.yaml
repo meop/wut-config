@@ -1,0 +1,7 @@
+---
+brew:
+  names:
+    - qwen-code
+yay:
+  names:
+    - qwen-code

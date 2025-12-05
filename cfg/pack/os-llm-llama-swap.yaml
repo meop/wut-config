@@ -5,9 +5,7 @@ brew:
   rem:
     - brew untap mostlygeek/llama-swap
   names:
-    - llama.cpp
     - llama-swap
 yay:
   names:
-    - llama.cpp-vulkan
     - llama-swap

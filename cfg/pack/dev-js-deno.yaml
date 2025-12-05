@@ -1,0 +1,10 @@
+---
+brew:
+  names:
+    - deno
+pacman:
+  names:
+    - deno
+winget:
+  names:
+    - DenoLand.Deno

@@ -1,0 +1,10 @@
+---
+brew:
+  names:
+    - opencode
+yay:
+  names:
+    - opencode-bin
+scoop:
+  names:
+    - opencode

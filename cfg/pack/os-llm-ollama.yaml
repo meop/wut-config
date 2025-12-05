@@ -1,0 +1,11 @@
+---
+brew:
+  names:
+    - --cask
+    - ollama-app
+pacman:
+  names:
+    - ollama-vulkan
+winget:
+  names:
+    - Ollama.Ollama

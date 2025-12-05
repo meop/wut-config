@@ -1,0 +1,7 @@
+---
+brew:
+  names:
+    - gemini-cli
+pacman:
+  names:
+    - gemini-cli

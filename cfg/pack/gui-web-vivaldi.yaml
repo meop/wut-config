@@ -1,0 +1,11 @@
+---
+brew:
+  names:
+    - --cask
+    - vivaldi
+pacman:
+  names:
+    - vivaldi
+winget:
+  names:
+    - Vivaldi.Vivaldi

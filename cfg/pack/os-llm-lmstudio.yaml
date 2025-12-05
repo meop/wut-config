@@ -1,0 +1,11 @@
+---
+brew:
+  names:
+    - --cask
+    - lm-studio
+yay:
+  names:
+    - lmstudio
+winget:
+  names:
+    - ElementLabs.LMStudio

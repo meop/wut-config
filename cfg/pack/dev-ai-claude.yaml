@@ -1,0 +1,8 @@
+---
+brew:
+  names:
+    --cask
+    - claude-code
+yay:
+  names:
+    - claude-code

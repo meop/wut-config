@@ -1,0 +1,11 @@
+---
+brew:
+  names:
+    - --cask
+    - brave-browser
+yay:
+  names:
+    - brave-bin
+winget:
+  names:
+    - Brave.Brave

@@ -1,0 +1,11 @@
+---
+brew:
+  names:
+    - --cask
+    - vlc
+pacman:
+  names:
+    - vlc
+winget:
+  names:
+    - VideoLAN.VLC

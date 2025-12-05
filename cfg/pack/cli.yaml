@@ -113,6 +113,15 @@ scoop:
     - unzip
     - zoxide
     - zstd
+xbps:
+  names:
+    - curl
+    - git
+    - nushell
+    - openssl
+    - starship
+    - unzip
+    - zoxide
 winget:
   names:
     - 7zip.7zip

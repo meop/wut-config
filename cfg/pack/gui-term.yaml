@@ -1,0 +1,8 @@
+---
+brew:
+  names:
+    - --cask
+    - iterm2
+winget:
+  names:
+    - Microsoft.WindowsTerminal

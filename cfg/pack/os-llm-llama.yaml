@@ -1,0 +1,7 @@
+---
+brew:
+  names:
+    - llama.cpp
+yay:
+  names:
+    - llama.cpp-vulkan

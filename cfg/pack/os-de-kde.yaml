@@ -1,0 +1,13 @@
+---
+xbps:
+  names:
+    - dbus
+    - elogind
+    - kde-baseapps
+    - kde-plasma
+    - mesa-dri
+    - sddm
+    - qt6-dbus
+    - qt6-wayland
+    - wayland
+    - xorg-minimal

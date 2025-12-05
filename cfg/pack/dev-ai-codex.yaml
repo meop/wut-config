@@ -1,0 +1,10 @@
+---
+brew:
+  names:
+    - codex
+pacman:
+  names:
+    - openai-codex
+scoop:
+  names:
+    - codex

@@ -1,0 +1,14 @@
+---
+brew:
+  add:
+    - brew tap oven-sh/bun
+  rem:
+    - brew untap oven-sh/bun
+  names:
+    - bun
+yay:
+  names:
+    - bun-bin
+winget:
+  names:
+    - Oven-sh.Bun

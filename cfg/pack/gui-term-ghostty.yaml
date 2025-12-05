@@ -3,10 +3,6 @@ brew:
   names:
     - --cask
     - ghostty
-    - iterm2
 pacman:
   names:
     - ghostty
-winget:
-  names:
-    - Microsoft.WindowsTerminal

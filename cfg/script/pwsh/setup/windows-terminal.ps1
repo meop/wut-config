@@ -20,7 +20,7 @@
               elevate        = $false
               font           = @{
                 face   = 'Hack Nerd Font Mono'
-                size   = 11
+                size   = 10
                 weight = 'normal'
               }
               historySize    = 9000

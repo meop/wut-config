@@ -56,6 +56,12 @@ nvim:
       darwin: '{HOME}/.config/nvim/lua'
       linux: '{HOME}/.config/nvim/lua'
       winnt: '{HOME}/AppData/Local/nvim/lua'
+opencode:
+  - in: opencode.json
+    out:
+      darwin: '{HOME}/.config/opencode/opencode.json'
+      linux: '{HOME}/.config/opencode/opencode.json'
+      winnt: '{HOME}/.config/opencode/opencode.json'
 pwsh:
   - in: pwsh
     out:

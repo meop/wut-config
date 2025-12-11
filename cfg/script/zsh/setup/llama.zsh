@@ -60,7 +60,8 @@ function () {
       else
         local service='llama-swap'
         local service_file="${service}.service"
-        local service_file_path="/etc/systemd/system/${service_file}"
+        local service_file_dir='/etc/systemd/system'
+        local service_file_path="${service_file_dir}/${service_file}"
 
         if systemctl list-units --type=service --all | grep "${service}" > /dev/null; then
           opPrintMaybeRunCmd sudo systemctl stop "${service}"
@@ -82,6 +83,8 @@ function () {
         )
         if [[ -f "${service_file_path}" ]]; then
           opPrintMaybeRunCmd sudo --preserve-env sh -c '"'rm -f "${service_file_path}"'"'
+        else
+          opPrintMaybeRunCmd sudo --preserve-env sh -c '"'mkdir -p "${service_file_dir}" '>' /dev/null '2>&1''"'
         fi
         for line in "${service_file_content[@]}"; do
           opPrintMaybeRunCmd sudo --preserve-env sh -c '"'echo "'""${line}""'" '>>' "${service_file_path}"'"'

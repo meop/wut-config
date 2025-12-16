@@ -1,81 +1,81 @@
 add_newline = false
 command_timeout = 5000
-format = "$username$hostname$custom$all"
+format = '$username$hostname$custom$all'
 scan_timeout = 300
 
 [character]
-error_symbol = "[](bold red)"
-success_symbol = "[](bold green)"
+error_symbol = '[](bold red)'
+success_symbol = '[](bold green)'
 
 [container]
-format = "[$symbol]($style)"
-style = "bold dimmed white"
-symbol = " "
+format = '[$symbol]($style)'
+style = 'bold dimmed white'
+symbol = ' '
 
 [custom.android]
-command = "echo android"
-format = "[$symbol$output]($style) in "
-os = "android"
-shell = ["sh"]
-style = "bold blue"
-symbol = " "
+command = 'echo android'
+format = '[$symbol$output]($style) in '
+os = 'android'
+shell = ['sh']
+style = 'bold blue'
+symbol = ' '
 when = true
 
 [custom.ios]
-command = "echo ios"
-format = "[$symbol$output]($style) in "
-os = "ios"
-shell = ["sh"]
-style = "bold blue"
-symbol = " "
+command = 'echo ios'
+format = '[$symbol$output]($style) in '
+os = 'ios'
+shell = ['sh']
+style = 'bold blue'
+symbol = ' '
 when = true
 
 [custom.linux]
-command = "[ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d '=' -f 2 | tr -d '\"'"
-format = "[$symbol$output]($style) in "
-os = "linux"
-shell = ["sh"]
-style = "bold blue"
-symbol = " "
+command = '[ -f /etc/os-release ] && grep "^ID=" /etc/os-release | cut -d "=" -f 2 | tr -d "\""'
+format = '[$symbol$output]($style) in '
+os = 'linux'
+shell = ['sh']
+style = 'bold blue'
+symbol = ' '
 when = true
 
 [custom.macos]
-command = "echo macos"
-format = "[$symbol$output]($style) in "
-os = "macos"
-shell = ["sh"]
-style = "bold blue"
-symbol = " "
+command = 'echo macos'
+format = '[$symbol$output]($style) in '
+os = 'macos'
+shell = ['sh']
+style = 'bold blue'
+symbol = ' '
 when = true
 
 [custom.windows]
-command = "echo | set /p p=windows"
-format = "[$symbol$output]($style) in "
-os = "windows"
-shell = ["cmd"]
-style = "bold blue"
-symbol = " "
+command = 'echo | set /p p=windows'
+format = '[$symbol$output]($style) in '
+os = 'windows'
+shell = ['cmd']
+style = 'bold blue'
+symbol = ' '
 when = true
 
 [directory]
-read_only_style = "bold dimmed yellow"
-style = "bold yellow"
+read_only_style = 'bold dimmed yellow'
+style = 'bold yellow'
 truncate_to_repo = false
 truncation_length = 9999
 
 [hostname]
-format = "[$ssh_symbol$hostname]($style) on "
+format = '[$ssh_symbol$hostname]($style) on '
 ssh_only = false
-ssh_symbol = " "
-style = "bold cyan"
+ssh_symbol = ' '
+style = 'bold cyan'
 
 [shell]
 disabled = false
-style = "bold dimmed white"
-pwsh_indicator = "pwsh"
+style = 'bold dimmed white'
+pwsh_indicator = 'pwsh'
 
 [username]
-format = "[$user]($style) at "
+format = '[$user]($style) at '
 show_always = true
-style_root = "bold red"
-style_user = "bold purple"
+style_root = 'bold red'
+style_user = 'bold purple'

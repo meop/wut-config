@@ -1,0 +1,11 @@
+---
+brew:
+  names:
+    - --cask
+    - zed
+pacman:
+  names:
+    - zed
+winget:
+  names:
+    - ZedIndustries.Zed

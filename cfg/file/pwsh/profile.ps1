@@ -1,7 +1,7 @@
 ## env
 $PSProfileDir = Split-Path -Path $MyInvocation.MyCommand.Path -Parent
-if (Test-Path "${PSProfileDir}/env.ps1") {
-  . "${PSProfileDir}/env.ps1"
+if (Test-Path "${PSProfileDir}\env.ps1") {
+  . "${PSProfileDir}\env.ps1"
 }
 
 ## prompt

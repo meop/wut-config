@@ -11,8 +11,8 @@ if ("${env:USERPROFILE}") {
 }
 # $HOME is readonly
 
-if (Test-Path "${HOME}/.pwsh") {
-  Get-ChildItem "${HOME}/.pwsh" -Filter '*.ps1' |
+if (Test-Path "${HOME}\.pwsh") {
+  Get-ChildItem "${HOME}\.pwsh" -Filter '*.ps1' |
   ForEach-Object {
     . $_.FullName
   }

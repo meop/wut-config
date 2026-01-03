@@ -8,11 +8,7 @@
     }
     if ($yn -ne 'n') {
       $path = 'HKLM:\System\CurrentControlSet\Services\WebClient\Parameters'
-      if (-not ((Get-ItemProperty $path).PSObject.Properties['FileSizeLimitInBytes'])) {
-        opPrintMaybeRunCmd sudo pwsh -c "'New-ItemProperty `"${path}`" -Name FileSizeLimitInBytes -Value 4294967295 -PropertyType DWord'"
-      } else {
-        opPrintMaybeRunCmd sudo pwsh -c "'Set-ItemProperty `"${path}`" -Name FileSizeLimitInBytes -Value 4294967295'"
-      }
+      opPrintMaybeRunCmd sudo pwsh -c "'New-ItemProperty `"${path}`" -Name FileSizeLimitInBytes -Value 4294967295 -PropertyType DWord -Force'"
     }
   } else {
     Write-Host 'script is for winnt'

@@ -93,6 +93,9 @@ ssh:
         darwin: '{HOME}/.hushlogin'
         linux: '{HOME}/.hushlogin'
         winnt: '{HOME}/.hushlogin'
+    - in: shell.bat
+      out:
+        winnt: C:/ssh/shell.bat
 starship:
   maps:
     - in: starship.toml

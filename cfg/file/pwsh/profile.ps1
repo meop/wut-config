@@ -16,5 +16,5 @@ Set-Alias ud 'cd ..'
 
 ## functions
 function v {
-  Invoke-Expression "${env:VISUAL} $($args -Join ' ')"
+  Invoke-Expression "${env:VISUAL} $($args -join ' ')"
 }

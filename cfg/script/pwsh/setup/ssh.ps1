@@ -36,8 +36,14 @@
     }
     if ($yn -ne 'n') {
       $path = 'HKLM:\SOFTWARE\OpenSSH'
-      $shell = 'C:\ssh\shell.bat'
+      $shell = 'C:\ProgramData\ssh\shell.bat'
       opPrintMaybeRunCmd sudo pwsh -c "'New-ItemProperty `"${path}`" -Name DefaultShell -Value `"${shell}`" -PropertyType String -Force'"
+
+      $settings = @(
+        , '@echo off'
+        , '`"C:\Program Files\Powershell\7\pwsh.exe`" -nologo %*'
+      )
+      opPrintMaybeRunCmd sudo pwsh -c "'Set-Content -Path `"$shell`" -Value `"$($settings -join '`n')`"'"
     }
   } else {
     Write-Host 'script is for winnt'

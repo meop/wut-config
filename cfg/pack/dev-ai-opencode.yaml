@@ -5,6 +5,6 @@ brew:
 yay:
   names:
     - opencode-bin
-scoop:
+winget:
   names:
-    - opencode
+    - sst.opencode

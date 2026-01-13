@@ -5,6 +5,6 @@ brew:
 pacman:
   names:
     - openai-codex
-scoop:
+winget:
   names:
-    - codex
+    - openai.codex

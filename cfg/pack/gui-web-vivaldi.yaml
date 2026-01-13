@@ -8,4 +8,4 @@ pacman:
     - vivaldi
 winget:
   names:
-    - Vivaldi.Vivaldi
+    - vivaldi.vivaldi

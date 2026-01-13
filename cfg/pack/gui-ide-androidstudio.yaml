@@ -8,4 +8,4 @@ yay:
     - android-studio
 winget:
   names:
-    - Google.AndroidStudio
+    - google.androidstudio

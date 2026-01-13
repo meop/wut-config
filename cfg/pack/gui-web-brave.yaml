@@ -8,4 +8,4 @@ yay:
     - brave-bin
 winget:
   names:
-    - Brave.Brave
+    - brave.brave

@@ -24,18 +24,18 @@ scoop:
     - xenia-canary
 winget:
   names:
-    - Meta.Oculus
-    - Microsoft.DirectX
-    - Microsoft.VCRedist.2005.x64
-    - Microsoft.VCRedist.2005.x86
-    - Microsoft.VCRedist.2008.x64
-    - Microsoft.VCRedist.2008.x86
-    - Microsoft.VCRedist.2010.x64
-    - Microsoft.VCRedist.2010.x86
-    - Microsoft.VCRedist.2012.x64
-    - Microsoft.VCRedist.2012.x86
-    - Microsoft.VCRedist.2013.x64
-    - Microsoft.VCRedist.2013.x86
-    - Microsoft.VCRedist.2015+.x64
-    - Microsoft.VCRedist.2015+.x86
-    - Valve.Steam
+    - meta.oculus
+    - microsoft.directx
+    - microsoft.vcredist.2005.x64
+    - microsoft.vcredist.2005.x86
+    - microsoft.vcredist.2008.x64
+    - microsoft.vcredist.2008.x86
+    - microsoft.vcredist.2010.x64
+    - microsoft.vcredist.2010.x86
+    - microsoft.vcredist.2012.x64
+    - microsoft.vcredist.2012.x86
+    - microsoft.vcredist.2013.x64
+    - microsoft.vcredist.2013.x86
+    - microsoft.vcredist.2015+.x64
+    - microsoft.vcredist.2015+.x86
+    - valve.steam

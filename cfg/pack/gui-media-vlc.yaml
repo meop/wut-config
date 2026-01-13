@@ -8,4 +8,4 @@ pacman:
     - vlc
 winget:
   names:
-    - VideoLAN.VLC
+    - videolan.vlc

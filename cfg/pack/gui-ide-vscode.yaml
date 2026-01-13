@@ -8,4 +8,4 @@ yay:
     - visual-studio-code-bin
 winget:
   names:
-    - Microsoft.VisualStudioCode
+    - microsoft.visualstudiocode

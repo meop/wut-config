@@ -3,10 +3,6 @@ brew:
   names:
     - --cask
     - iina
-scoop:
-  add:
-    - scoop bucket add extras
-  rem:
-    - scoop bucket rm extras
+winget:
   names:
-    - mpc-hc-fork
+    - clsid2.mpc-hc

@@ -11,6 +11,6 @@ dnf:
 pacman:
   names:
     - uv
-scoop:
+winget:
   names:
-    - uv
+    - astral-sh.uv

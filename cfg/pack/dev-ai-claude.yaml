@@ -1,8 +1,11 @@
 ---
 brew:
   names:
-    --cask
+    - --cask
     - claude-code
 yay:
   names:
     - claude-code
+winget:
+  names:
+    - anthropic.claudecode

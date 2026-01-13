@@ -13,14 +13,14 @@ function () {
       local output="${HOME}/Hack.zip"
       local url='https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip'
       opPrintMaybeRunCmd curl --fail-with-body --location --no-progress-meter --output "${output}" --url "${url}"
-      opPrintMaybeRunCmd unzip -q "${output}" -d "${output}.unzip"
-      opPrintMaybeRunCmd cp "${output}.unzip"'/*.ttf' "${fonts}"
+      opPrintMaybeRunCmd 7z x "${output}" -bso0 -bsp0 -o"${output}.out"
+      opPrintMaybeRunCmd cp "${output}.out"'/*.ttf' "${fonts}"
       opPrintMaybeRunCmd rm -r -f "${output}"'*'
       local output="${HOME}/FiraCode.zip"
       local url='https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip'
       opPrintMaybeRunCmd curl --fail-with-body --location --no-progress-meter --output "${output}" --url "${url}"
-      opPrintMaybeRunCmd unzip -q "${output}" -d "${output}.unzip"
-      opPrintMaybeRunCmd cp "${output}.unzip"'/*.ttf' "${fonts}"
+      opPrintMaybeRunCmd 7z x "${output}" -bso0 -bsp0 -o"${output}.out"
+      opPrintMaybeRunCmd cp "${output}.out"'/*.ttf' "${fonts}"
       opPrintMaybeRunCmd rm -r -f "${output}"'*'
     fi
   else

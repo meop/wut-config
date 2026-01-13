@@ -8,4 +8,4 @@ pacman:
     - wireshark-qt
 winget:
   names:
-    - WiresharkFoundation.Wireshark
+    - wiresharkfoundation.wireshark

@@ -2,18 +2,23 @@
 brew:
   names:
     - node
+    - pnpm
 apt:
   names:
   # - nodejs *
   # - npm *
+  # - pnpm *
 dnf:
   names:
     - nodejs
     - nodejs-npm
+    - nodejs-pnpm
 pacman:
   names:
     - nodejs
     - npm
+    - pnpm
 winget:
   names:
-    - OpenJS.NodeJS
+    - openjs.nodejs
+    - pnpm.pnpm

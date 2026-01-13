@@ -8,4 +8,4 @@ pacman:
     - obsidian
 winget:
   names:
-    - Obsidian.Obsidian
+    - obsidian.obsidian

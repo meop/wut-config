@@ -2,8 +2,6 @@
 brew:
   names:
     - --cask
-    - copyq
-    - displaylink
     - flux
     - grandperspective
     - karabiner-elements
@@ -13,24 +11,15 @@ brew:
     - windows-app
 pacman:
   names:
-    - copyq
     - gparted
     - remmina
-scoop:
-  add:
-    - scoop bucket add extras
-  rem:
-    - scoop bucket rm extras
-  names:
-    - copyq
-    - everything
-    - rapidee
-    - windirstat
 winget:
   names:
-    - Armin2208.WindowsAutoNightMode
-    - GlavSoft.TightVNC
-    - Microsoft.PowerToys
-    - Microsoft.Sysinternals.Suite
-    - Microsoft.WindowsApp
-    - Rufus.Rufus
+    - arminosaj.autodarkmode
+    - glavsoft.tightvnc
+    - microsoft.powertoys
+    - microsoft.sysinternals.suite
+    - microsoft.windowsapp
+    - rufus.rufus
+    - voidtools.everything
+    - windirstat.windirstat

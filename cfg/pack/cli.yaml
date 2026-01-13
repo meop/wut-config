@@ -12,16 +12,14 @@ brew:
     - nushell
     - openssh
     - openssl
+    - powershell # --cask
     - ripgrep
     - sevenzip
     - starship
     - tokei
-    - unzip
     - zellij
     - zoxide
     - zstd
-    - --cask
-    - powershell
 apt:
   names:
     - btm
@@ -41,7 +39,6 @@ apt:
     - starship
     - sudo
     - tokei
-    - unzip
     # - zellij *
     - zoxide
     - zsh
@@ -72,7 +69,6 @@ dnf:
     - starship
     - tokei
     - sudo
-    - unzip
     - zellij
     - zoxide
     - zsh
@@ -95,7 +91,6 @@ pacman:
     - starship
     - sudo
     - tokei
-    - unzip
     - zellij
     - zoxide
     - zsh
@@ -103,16 +98,6 @@ pacman:
 yay:
   names:
     - powershell-bin
-scoop:
-  names:
-    - bottom
-    - fd
-    - fzf
-    - ripgrep
-    - tokei
-    - unzip
-    - zoxide
-    - zstd
 xbps:
   names:
     - curl
@@ -120,14 +105,20 @@ xbps:
     - nushell
     - openssl
     - starship
-    - unzip
     - zoxide
 winget:
   names:
     - 7zip.7zip
-    - Git.Git
-    - Microsoft.AppInstaller
-    - Microsoft.PowerShell
-    - Neovim.Neovim
-    - Nushell.Nushell
-    - Starship.Starship
+    - ajeetdsouza.zoxide
+    - burntsushi.ripgrep.msvc
+    - clement.bottom
+    - git.git
+    - junegunn.fzf
+    - meta.zstandard
+    - microsoft.appinstaller
+    - microsoft.powershell
+    - neovim.neovim
+    - nushell.nushell
+    - sharkdp.fd
+    - starship.starship
+    - xampprocky.tokei

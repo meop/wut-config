@@ -13,4 +13,4 @@ pacman:
     - rustup
 winget:
   names:
-    - Rustlang.Rustup
+    - rustlang.rustup

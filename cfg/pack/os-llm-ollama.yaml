@@ -8,4 +8,4 @@ pacman:
     - ollama-vulkan
 winget:
   names:
-    - Ollama.Ollama
+    - ollama.ollama

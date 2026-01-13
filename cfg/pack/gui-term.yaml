@@ -5,4 +5,4 @@ brew:
     - iterm2
 winget:
   names:
-    - Microsoft.WindowsTerminal
+    - microsoft.windowsterminal

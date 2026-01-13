@@ -8,4 +8,4 @@ pacman:
     - zed
 winget:
   names:
-    - ZedIndustries.Zed
+    - zedindustries.zed

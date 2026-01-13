@@ -7,6 +7,9 @@ pwsh:
     choco:
       sys_os_plat:
         - winnt
+    claude:
+      sys_os_plat:
+        - winnt
     deno:
       sys_os_plat:
         - winnt
@@ -31,6 +34,9 @@ pwsh:
       sys_os_plat:
         - winnt
     llama:
+      sys_os_plat:
+        - winnt
+    ssh:
       sys_os_plat:
         - winnt
     webdav:

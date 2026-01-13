@@ -11,4 +11,4 @@ yay:
     - bun-bin
 winget:
   names:
-    - Oven-sh.Bun
+    - oven-sh.bun

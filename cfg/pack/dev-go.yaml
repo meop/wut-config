@@ -13,4 +13,4 @@ pacman:
     - go
 winget:
   names:
-    - GoLang.Go
+    - golang.go

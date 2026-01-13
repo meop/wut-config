@@ -14,5 +14,5 @@ scoop:
   rem:
     - scoop bucket rm nerd-fonts
   names:
-    - FiraCode-NF-Mono
-    - Hack-NF-Mono
+    - firacode-nf-mono
+    - hack-nf-mono

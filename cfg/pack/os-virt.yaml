@@ -2,9 +2,8 @@
 brew:
   names:
     - swtpm
-    - --cask
-    - utm
+    - utm # --cask
 pacman:
   names:
-    - swtpm
     - qemu-full
+    - swtpm

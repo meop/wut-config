@@ -8,4 +8,4 @@ yay:
     - microsoft-edge-stable-bin
 winget:
   names:
-    - Microsoft.Edge
+    - microsoft.edge

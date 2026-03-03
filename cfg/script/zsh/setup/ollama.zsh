@@ -21,8 +21,7 @@ function () {
         service_file_content=(
           '[Service]'
           'Environment=\"OLLAMA_HOST=0.0.0.0:11434\"'
-          'Environment=\"OLLAMA_MODELS=/vol/models/ollama\"'
-          'Environment=\"OLLAMA_MAX_LOADED_MODELS=1\"'
+          'Environment=\"OLLAMA_MODELS=/vol/model/ollama\"'
         )
         if [[ -f "${service_file_path}" ]]; then
           opPrintMaybeRunCmd sudo --preserve-env sh -c '"'rm -f "${service_file_path}"'"'

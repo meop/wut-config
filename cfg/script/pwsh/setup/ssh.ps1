@@ -43,7 +43,7 @@
         , '@echo off'
         , '`"C:\Program Files\Powershell\7\pwsh.exe`" -nologo %*'
       )
-      opPrintMaybeRunCmd sudo pwsh -c "'Set-Content -Path `"$shell`" -Value `"$($settings -join '`n')`"'"
+      opPrintMaybeRunCmd sudo pwsh -c "'Set-Content -Path `"$shell`" -Value `"$($settings | Out-String) -NoNewLine`"'"
     }
   } else {
     Write-Host 'script is for winnt'

@@ -5,7 +5,7 @@ brew:
     - lm-studio
 yay:
   names:
-    - lmstudio
+    - lmstudio-bin
 winget:
   names:
     - elementlabs.lmstudio

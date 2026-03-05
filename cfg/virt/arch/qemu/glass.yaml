@@ -44,7 +44,7 @@ qemu:
     - -device qemu-xhci
     - -drive "if=none,media=cdrom,id=iso0,readonly=on,file={DATA_WARE_IMAGES_DIR_PATH}/{QEMU_GUEST_SYS_PLAT}/Win11_24H2_English_x64.iso"
     - -device usb-storage,drive=iso0,removable=true
-    - -drive "if=none,media=cdrom,id=iso1,readonly=on,file={DATA_WARE_IMAGES_DIR_PATH}/{QEMU_GUEST_SYS_PLAT}/virtio-win-0.1.271.iso"
+    - -drive "if=none,media=cdrom,id=iso1,readonly=on,file={DATA_WARE_IMAGES_DIR_PATH}/{QEMU_GUEST_SYS_PLAT}/virtio-win-0.1.285.iso"
     - -device usb-storage,drive=iso1,removable=true
     - -object iothread,id=iot0
     - -object iothread,id=iot1

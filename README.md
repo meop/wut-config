@@ -1,37 +1,25 @@
 # wut-config
 
-Web Update Tool - Config
+Configuration files for Web Update Tool (wut) — package definitions, dotfile mappings, and custom scripts.
 
-Companion files for Web Update Tool
+Companion repository to the main [wut](../wut) project.
 
-## client
+## Setup
 
-### init
+After cloning and configuring the wut server, run these initialization commands on the client:
 
-After load, run these commands below
-
-You may also need to reopen your terminal program in between
-
-Sync packages
-
-```sh
+```bash
+# Sync packages
 wut p s
-```
 
-Add required cli tools
-
-```sh
+# Add required CLI tools
 wut p a -g cli
-```
 
-(Optional) For Linux, you may need to install Nushell manually
-
-```sh
+# (Linux only) Install Nushell if not available
 wut s e i nu
+
+# Sync dotfiles
+wut f s
 ```
 
-Sync config files
-
-```sh
-wut p f s
-```
+You may need to reopen your terminal between commands for environment changes to take effect.

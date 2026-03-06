@@ -1,4 +1,4 @@
-$env:WUT_URL = 'http://yard.lan:9000'
+$env:WUT_URL = 'http://arch.lan:9000'
 
 function wut {
   $url = "${env:WUT_URL}".TrimEnd('/')

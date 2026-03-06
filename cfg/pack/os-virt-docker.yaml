@@ -1,0 +1,5 @@
+---
+pacman:
+  names:
+    - docker
+    - docker-compose

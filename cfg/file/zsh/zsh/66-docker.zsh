@@ -5,7 +5,7 @@ if type docker > /dev/null; then
     case $1 in
       'ls')
         if [[ -z $2 ]]; then
-          command docker container ls --all --format 'table {{.Names}}\t{{.Image}}\t{{.State}}\t{{.Status}}'
+          command docker container ls --format 'table {{.Names}}\t{{.Image}}\t{{.Ports}}\t{{.State}}\t{{.Status}}'
         else
           command docker container ls "${@:2}"
         fi

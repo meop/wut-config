@@ -1,0 +1,21 @@
+---
+lxc:
+  autostart: true
+  network:
+    hwaddr: 10:66:6a:2a:d5:99
+    name: eth0
+    ## bridge
+    link: br0
+    type: veth
+    ## macvlan
+    # link: mvl0
+    # type: macvlan
+  mounts:
+    - source: /data/virt/docker/{instance}
+      target: /data/virt/docker/{instance}
+    - source: /data/home
+      target: /data/home
+    - source: /data/media
+      target: /data/media
+    - source: /data/ware
+      target: /data/ware

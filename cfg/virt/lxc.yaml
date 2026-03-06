@@ -1,0 +1,14 @@
+---
+environment:
+  - VIRT_LXC_DIR_PATH=/vol/virt/lxc
+lxc:
+  config:
+    - lxc.tty.max = 4
+    - lxc.pty.max = 1024
+    - lxc.apparmor.profile = unconfined
+    - lxc.seccomp.profile =
+    - lxc.cgroup.devices.allow = a
+    - lxc.cgroup2.devices.allow = a
+    - lxc.mount.auto = cgroup:mixed proc:mixed sys:mixed
+    - lxc.mount.entry = /dev/net/tun dev/net/tun none bind,create=file
+    - lxc.mount.entry = /sys/fs/fuse/connections sys/fs/fuse/connections none bind,optional 0 0

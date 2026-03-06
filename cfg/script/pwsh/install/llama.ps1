@@ -2,8 +2,8 @@
   if ($IsWindows) {
     $yn = ''
     function expand_release_assets ([string]$url, [string[]]$patterns) {
-      $res = (opPrintMaybeRunCmd Invoke-WebRequest -ErrorAction Stop -ProgressAction SilentlyContinue -Uri "${url}") |
-        ConvertFrom-Json
+      $res = (opPrintMaybeRunCmd Invoke-WebRequest -ErrorAction Stop -ProgressAction SilentlyContinue -Uri "${url}")
+        | ConvertFrom-Json
       if (-not $NOOP) {
         $task = 'llama-swap'
         $taskWasRunning = $false
@@ -15,9 +15,9 @@
         }
         $url_assets = @()
         foreach ($pattern in $patterns) {
-          $url_assets += $res.assets |
-            Where-Object { $_.browser_download_url -like $pattern } |
-            Select-Object -ExpandProperty browser_download_url
+          $url_assets += $res.assets
+            | Where-Object { $_.browser_download_url -like $pattern }
+            | Select-Object -ExpandProperty browser_download_url
         }
         foreach ($url_asset in $url_assets) {
           $output = "${HOME}\$($url_asset.Split('/')[-1])"

@@ -1,4 +1,4 @@
-export WUT_URL='http://yard.lan:9000'
+export WUT_URL='http://arch.lan:9000'
 
 function wut {
   local url=$(echo "${WUT_URL}" | sed 's:/*$::')

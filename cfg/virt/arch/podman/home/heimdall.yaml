@@ -1,0 +1,25 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: '{instance}'
+spec:
+  hostname: '{instance}'
+  containers:
+    - name: web
+      image: lscr.io/linuxserver/{instance}:latest
+      env:
+        - name: PGID
+          value: '10000'
+        - name: PUID
+          value: '9000'
+        - name: TZ
+          value: 'America/Los_Angeles'
+      volumeMounts:
+        - name: config
+          mountPath: /config
+  volumes:
+    - name: config
+      hostPath:
+        path: /data/virt/podman/{host}/{pod}/{instance}/web/config
+        type: DirectoryOrCreate

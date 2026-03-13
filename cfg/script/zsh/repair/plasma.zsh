@@ -8,7 +8,7 @@ function () {
   # the only workaround to reset this behavior is to start over by erasing these
   # files and setting up new panels
   if [[ $SYS_OS_PLAT == 'linux' ]]; then
-    if [[ $SYS_OS_DE_ID == 'plasma' ]]; then
+    if [[ $SYS_OS_DE == 'plasma' ]]; then
       if [[ $YES ]]; then
         yn='y'
       else

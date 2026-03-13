@@ -4,10 +4,10 @@ function () {
   local yn=''
   if [[ $SYS_CPU_ARCH == 'x86_64' ]]; then
     if [[ $SYS_OS_PLAT == 'linux' ]]; then
-      if [[ $SYS_OS_ID == 'debian' || $SYS_OS_ID == 'ubuntu' ]]; then
+      if [[ $SYS_OS == 'debian' || $SYS_OS == 'ubuntu' ]]; then
         function install_repo {
           local output="${HOME}/packages-microsoft-prod.deb"
-          local url="https://packages.microsoft.com/config/${SYS_OS_ID}/${SYS_OS_VER_ID}/packages-microsoft-prod.deb"
+          local url="https://packages.microsoft.com/config/${SYS_OS}/${SYS_OS_VERS}/packages-microsoft-prod.deb"
           opPrintMaybeRunCmd curl --fail-with-body --location --no-progress-meter --output "${output}" --url "${url}"
           opPrintMaybeRunCmd sudo dpkg --install "${output}"
           opPrintMaybeRunCmd rm "${output}"
@@ -19,9 +19,9 @@ function () {
         fi
         if [[ $yn != 'n' ]]; then
           local dotnet_sdk_ver='9.0'
-          if [[ $SYS_OS_ID == 'debian' ]]; then
+          if [[ $SYS_OS == 'debian' ]]; then
             install_repo
-          elif [[ $SYS_OS_ID == 'ubuntu' ]]; then
+          elif [[ $SYS_OS == 'ubuntu' ]]; then
             opPrintMaybeRunCmd sudo add-apt-repository ppa:dotnet/backports
           fi
           opPrintMaybeRunCmd sudo apt update '>' /dev/null '2>&1'

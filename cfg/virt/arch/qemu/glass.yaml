@@ -1,13 +1,13 @@
 ---
 environment:
-  - QEMU_GUEST_SYS_ARCH=x86_64
-  - QEMU_GUEST_SYS_PLAT=winnt
   ## bridge
-  - QEMU_HOST_NIC=br0
-  - QEMU_HOST_NIC_MAC=52:54:00:67:6C:61
+  - NIC=br0
+  - NIC_MAC=52:54:00:67:6C:61
   ## macvtap
-  # - QEMU_HOST_NIC=mvt0
+  # - NIC=mvt0
   - VFIO_PCI_DEV_IDS=01:00.0,01:00.1,01:00.2,01:00.3
+  - VM_SYS_ARCH=x86_64
+  - VM_SYS_PLAT=winnt
 swtpm:
   arguments:
     - socket
@@ -31,19 +31,19 @@ qemu:
     - -tpmdev emulator,id=tpm0,chardev=cdtpm0
     - -device tpm-tis,tpmdev=tpm0
     - -rtc base=localtime,clock=host
-    - -cpu host,host-cache-info=on,migratable=off{QEMU_GUEST_CPU_FLAGS}
-    - -smp sockets={QEMU_GUEST_CPU_SOCKETS},cores={QEMU_GUEST_CPU_CORES},threads={QEMU_GUEST_CPU_THREADS}
+    - -cpu host,host-cache-info=on,migratable=off{VM_CPU_FLAGS}
+    - -smp sockets={VM_CPU_SOCKETS},cores={VM_CPU_CORES},threads={VM_CPU_THREADS}
     - -m 32g
     ## bridge
-    - -netdev bridge,id=net0,br={QEMU_HOST_NIC}
+    - -netdev bridge,id=net0,br={NIC}
     ## macvlan
-    # - -netdev tap,id=net0,fd=3,vhost=on,vhostfd=4 3<> /dev/tap{QEMU_HOST_NIC_IF_INDEX} 4<> /dev/vhost-net
-    - -device virtio-net-pci,netdev=net0,mac={QEMU_HOST_NIC_MAC}
+    # - -netdev tap,id=net0,fd=3,vhost=on,vhostfd=4 3<> /dev/tap{NIC_IF_INDEX} 4<> /dev/vhost-net
+    - -device virtio-net-pci,netdev=net0,mac={NIC_MAC}
     - -device virtio-rng-pci
     - -device qemu-xhci
-    - -drive "if=none,media=cdrom,id=iso0,readonly=on,file={DATA_WARE_IMAGES_DIR_PATH}/{QEMU_GUEST_SYS_PLAT}/Win11_24H2_English_x64.iso"
+    - -drive "if=none,media=cdrom,id=iso0,readonly=on,file={DATA_WARE_IMAGES_DIR_PATH}/{VM_SYS_PLAT}/Win11_24H2_English_x64.iso"
     - -device usb-storage,drive=iso0,removable=true
-    - -drive "if=none,media=cdrom,id=iso1,readonly=on,file={DATA_WARE_IMAGES_DIR_PATH}/{QEMU_GUEST_SYS_PLAT}/virtio-win-0.1.285.iso"
+    - -drive "if=none,media=cdrom,id=iso1,readonly=on,file={DATA_WARE_IMAGES_DIR_PATH}/{VM_SYS_PLAT}/virtio-win-0.1.285.iso"
     - -device usb-storage,drive=iso1,removable=true
     - -object iothread,id=iot0
     - -object iothread,id=iot1
@@ -80,4 +80,5 @@ qemu:
     - -device vfio-pci,host={VFIO_PCI_DEV_IDS_3}
     - -monitor unix:{TMP_QEMU_DIR_PATH}/{instance}/monitor.socket,server=on,wait=off
     - -qmp unix:{TMP_QEMU_DIR_PATH}/{instance}/qmp.socket,server=on,wait=off
+    - -pidfile {TMP_QEMU_DIR_PATH}/{instance}/qemu.pid
     - -daemonize

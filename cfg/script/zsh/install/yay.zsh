@@ -1,7 +1,7 @@
 function () {
   local yn=''
   if [[ $SYS_OS_PLAT == 'linux' ]]; then
-    if [[ $SYS_OS_ID == 'arch' ]]; then
+    if [[ $SYS_OS == 'arch' ]]; then
       if [[ $YES ]]; then
         yn='y'
       else

@@ -1,7 +1,7 @@
 function () {
   local yn=''
   if [[ $SYS_OS_PLAT == 'linux' ]]; then
-    if [[ $SYS_OS_ID == 'debian' || $SYS_OS_ID == 'ubuntu' ]]; then
+    if [[ $SYS_OS == 'debian' || $SYS_OS == 'ubuntu' ]]; then
       if [[ $YES ]]; then
         yn='y'
       else

@@ -2,7 +2,7 @@
 function () {
   local yn=''
   if [[ $SYS_OS_PLAT == 'linux' ]]; then
-    if [[ $SYS_OS_ID == 'debian' || $SYS_OS_ID == 'ubuntu' ]]; then
+    if [[ $SYS_OS == 'debian' || $SYS_OS == 'ubuntu' ]]; then
       if [[ $YES ]]; then
         yn='y'
       else
@@ -11,14 +11,14 @@ function () {
       if [[ $yn != 'n' ]]; then
         function install_repo {
           local output_key='/etc/apt/keyrings/docker.asc'
-          local url="https://download.docker.com/linux/${SYS_OS_ID}"
+          local url="https://download.docker.com/linux/${SYS_OS}"
           opPrintMaybeRunCmd sudo install -m 0755 -d /etc/apt/keyrings
           opPrintMaybeRunCmd sudo curl --fail-with-body --location --no-progress-meter --output "${output_key}" --url "${url}"/gpg
           opPrintMaybeRunCmd sudo chmod a+r "${output_key}"
 
           local output='/etc/apt/sources.list.d/docker.list'
           local arch="$(dpkg --print-architecture)"
-          opPrintMaybeRunCmd sudo --preserve-env sh -c '"'echo "'"deb '['arch="${arch}" signed-by="${output_key}"']' "${url}" "${SYS_OS_VER_CODE}" stable"'" '>' "${output}"'"'
+          opPrintMaybeRunCmd sudo --preserve-env sh -c '"'echo "'"deb '['arch="${arch}" signed-by="${output_key}"']' "${url}" "${SYS_OS_VERS_CODE}" stable"'" '>' "${output}"'"'
         }
         install_repo
         opPrintMaybeRunCmd sudo apt update '>' /dev/null '2>&1'

@@ -3,7 +3,7 @@ function () {
   local yn=''
   if [[ $SYS_CPU_ARCH == 'x86_64' ]]; then
     if [[ $SYS_OS_PLAT == 'linux' ]]; then
-      if [[ $SYS_OS_ID == 'debian' || $SYS_OS_ID == 'ubuntu' ]]; then
+      if [[ $SYS_OS == 'debian' || $SYS_OS == 'ubuntu' ]]; then
         if [[ $YES ]]; then
           yn='y'
         else
@@ -13,8 +13,8 @@ function () {
           function install_keyring {
             local cuda_keyring_ver='1.1-1'
             local output="${HOME}/cuda-keyring_${cuda_keyring_ver}_all.deb"
-            local sys_os_ver_id_flat=$(echo "${SYS_OS_VER_ID}" | sed 's/\.//g')
-            local url="https://developer.download.nvidia.com/compute/cuda/repos/${SYS_OS_ID}${sys_os_ver_id_flat}/${SYS_CPU_ARCH}/cuda-keyring_${cuda_keyring_ver}_all.deb"
+            local sys_os_vers_flat=$(echo "${SYS_OS_VERS}" | sed 's/\.//g')
+            local url="https://developer.download.nvidia.com/compute/cuda/repos/${SYS_OS}${sys_os_vers_flat}/${SYS_CPU_ARCH}/cuda-keyring_${cuda_keyring_ver}_all.deb"
             opPrintMaybeRunCmd curl --fail-with-body --location --no-progress-meter --output "${output}" --url "${url}"
             opPrintMaybeRunCmd sudo dpkg --install "${output}"
             opPrintMaybeRunCmd rm "${output}"

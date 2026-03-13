@@ -56,7 +56,7 @@ zsh:
     docker:
       sys_os_plat:
         - linux
-      sys_os_id:
+      sys_os:
         - debian
         - ubuntu
     dotnet:
@@ -64,7 +64,7 @@ zsh:
         - x86_64
       sys_os_plat:
         - linux
-      sys_os_id:
+      sys_os:
         - debian
         - ubuntu
     font:
@@ -73,13 +73,13 @@ zsh:
     node:
       sys_os_plat:
         - linux
-      sys_os_id:
+      sys_os:
         - debian
         - ubuntu
     nu:
       sys_os_plat:
         - linux
-      sys_os_id:
+      sys_os:
         - debian
         - ubuntu
         - rocky
@@ -89,13 +89,13 @@ zsh:
         - x86_64
       sys_os_plat:
         - linux
-      sys_os_id:
+      sys_os:
         - debian
         - ubuntu
     yay:
       sys_os_plat:
         - linux
-      sys_os_id:
+      sys_os:
         - arch
   repair:
     brew:
@@ -107,13 +107,13 @@ zsh:
     plasma:
       sys_os_plat:
         - linux
-      sys_os_de_id:
+      sys_os_de:
         - plasma
   setup:
     gnome-terminal:
       sys_os_plat:
         - linux
-      sys_os_de_id:
+      sys_os_de:
         - gnome
     iterm:
       sys_os_plat:
@@ -121,5 +121,5 @@ zsh:
     lxterminal:
       sys_os_plat:
         - linux
-      sys_os_de_id:
+      sys_os_de:
         - lxde

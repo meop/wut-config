@@ -8,8 +8,7 @@ function () {
     fi
     if [[ $yn != 'n' ]]; then
       local service='lxc'
-      opPrintMaybeRunCmd sudo systemctl enable "${service}"
-      opPrintMaybeRunCmd sudo systemctl start "${service}"
+      opPrintMaybeRunCmd sudo systemctl enable --now "${service}"
     fi
   fi
 }

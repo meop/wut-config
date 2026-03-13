@@ -2,14 +2,14 @@
 function () {
   local yn=''
   if [[ $SYS_OS_PLAT == 'linux' ]]; then
-    if [[ $SYS_OS_ID == 'debian' || $SYS_OS_ID == 'ubuntu' || $SYS_OS_ID == 'rocky' || $SYS_OS_ID == 'fedora' ]]; then
+    if [[ $SYS_OS == 'debian' || $SYS_OS == 'ubuntu' || $SYS_OS == 'rocky' || $SYS_OS == 'fedora' ]]; then
       if [[ $YES ]]; then
         yn='y'
       else
         read 'yn?? install nu - (system) [y, [n]]: '
       fi
       if [[ $yn != 'n' ]]; then
-        if [[ $SYS_OS_ID == 'debian' || $SYS_OS_ID == 'ubuntu' ]]; then
+        if [[ $SYS_OS == 'debian' || $SYS_OS == 'ubuntu' ]]; then
           function install_repo {
             local output="/etc/apt/sources.list.d/fury-nushell.sources"
             local output_gpg='/etc/apt/trusted.gpg.d/fury-nushell.gpg'
@@ -24,7 +24,7 @@ function () {
           install_repo
           opPrintMaybeRunCmd sudo apt update '>' /dev/null '2>&1'
           opPrintMaybeRunCmd sudo apt install nushell
-        elif [[ $SYS_OS_ID == 'rocky' || $SYS_OS_ID == 'fedora' ]]; then
+        elif [[ $SYS_OS == 'rocky' || $SYS_OS == 'fedora' ]]; then
           function install_repo {
             local output='/etc/yum.repos.d/fury-nushell.repo'
             local url='https://yum.fury.io/nushell'

@@ -14,8 +14,7 @@ function () {
         local service_file_path="${service_file_dir}/${service_file}"
 
         if systemctl list-units --type=service --all | grep "${service}" > /dev/null; then
-          opPrintMaybeRunCmd sudo systemctl stop "${service}"
-          opPrintMaybeRunCmd sudo systemctl disable "${service}"
+          opPrintMaybeRunCmd sudo systemctl disable --now "${service}"
         fi
 
         service_file_content=(
@@ -33,8 +32,7 @@ function () {
         done
 
         opPrintMaybeRunCmd sudo systemctl daemon-reload
-        opPrintMaybeRunCmd sudo systemctl enable "${service}"
-        opPrintMaybeRunCmd sudo systemctl start "${service}"
+        opPrintMaybeRunCmd sudo systemctl enable --now "${service}"
       fi
     fi
   fi
